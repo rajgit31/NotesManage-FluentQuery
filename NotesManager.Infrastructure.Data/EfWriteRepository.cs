@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
 using NotesManager.Domain.Interfaces;
+using NotesManager.Domain.Interfaces.Data;
 
 namespace NotesManager.Infrastructure.Data
 {

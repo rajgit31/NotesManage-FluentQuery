@@ -14,6 +14,7 @@ namespace NotesManager.Infrastructure.Data.Mappings
             this.Property(x => x.Title);
             this.Property(x => x.Description);
             this.Property(t => t.CreatedDate);
+            this.Property(t => t.IsActive);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NotesManager.Domain.Interfaces
+namespace NotesManager.Domain.Interfaces.Data
 {
     public interface IWriteRepository<TEntity>
     {

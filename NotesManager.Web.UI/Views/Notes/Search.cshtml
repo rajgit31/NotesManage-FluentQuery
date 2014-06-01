@@ -1,0 +1,20 @@
+﻿@using NotesManager.Web.UI.ViewModels
+@model IEnumerable<NotesManager.Web.UI.ViewModels.NoteViewModel>
+
+@{
+    ViewBag.Title = "Search Notes";
+}
+
+@*<p>@Html.ActionLink("Seach Notes", "Search", "Notes")</p>*@
+
+<table>
+    @foreach (var note in Model)
+    {
+        <tr>
+            <td>@note.Id</td> 
+            <td>@note.Title</td> 
+            <td>@note.Description</td>
+            <td>@note.CreatedDate</td> 
+        </tr>
+    }
+</table>

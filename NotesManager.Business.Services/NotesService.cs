@@ -4,52 +4,53 @@ using System.Linq;
 using NotesManager.Business.Interfaces;
 using NotesManager.Domain.Entities;
 using NotesManager.Domain.Interfaces;
+using NotesManager.Domain.Interfaces.Data;
 
 namespace NotesManager.Business.Services
 {
     public class NotesService : INotesService
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly INotesQuery _notesQuery;
+        private readonly IQueries _queries;
         private readonly IWriteRepository<Note> _notesRepository;
 
-        public NotesService(IUnitOfWork unitOfWork, INotesQuery notesQuery)
+        public NotesService(IUnitOfWork unitOfWork, IQueries queries)
         {
             if (unitOfWork == null)
             {
                 throw new ArgumentNullException("unitOfWork");
             }
 
-            if (notesQuery == null)
+            if (queries == null)
             {
-                throw new ArgumentNullException("notesQuery");
+                throw new ArgumentNullException("queries");
             }
 
-            _notesQuery = notesQuery;
+            _queries = queries;
+            
             _unitOfWork = unitOfWork;
             _notesRepository = _unitOfWork.Repository<Note>();
         }
 
-        public IEnumerable<Note> GetAllNotes()
+        public IEnumerable<Note> Notes()
         {
-            INotesQuery notesQuery = _notesQuery.Notes();
-            var list = notesQuery.ToList();
-            return list;
+            return _queries.Notes.ToList();
         }
 
         public IEnumerable<Note> GetNotes(int numberOfNotes)
         {
-            return _notesQuery.Notes().Get(numberOfNotes);
+            return _queries.Notes.ByCount(numberOfNotes);
         }
 
         public IEnumerable<Note> GetNotesWithTitleByDate(DateTime dateCreated, string title)
         {
-            return _notesQuery.Notes().ByDate(dateCreated).ByTitle(title);
+            //fluent syntax and make the query readable like a sentence.
+            return _queries.Notes.ByDate(dateCreated).ByTitle(title).ToList();
         }
 
         public IEnumerable<Note> GetNotes(string title)
         {
-            return _notesQuery.Notes().ByTitle(title);
+            return _queries.Notes.ByTitle(title);
         }
 
         public void Add(Note note)

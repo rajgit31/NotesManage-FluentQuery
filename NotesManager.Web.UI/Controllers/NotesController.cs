@@ -23,7 +23,7 @@ namespace NotesManager.Web.UI.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            var notes = _notesService.GetAllNotes();
+            var notes = _notesService.Notes();
             var notesViewModels = notes.ConvertToViewModel();
             return View(notesViewModels);
         }
@@ -53,11 +53,11 @@ namespace NotesManager.Web.UI.Controllers
         }
 
 
-        public ActionResult About()
+        public ActionResult Search(string title, DateTime createdDate)
         {
-            ViewBag.Message = "Your app description page.";
-
-            return View();
+            var notes = _notesService.GetNotesWithTitleByDate(createdDate, title);
+            var notesViewModels = notes.ConvertToViewModel();
+            return View(notesViewModels);
         }
 
         public ActionResult Contact()

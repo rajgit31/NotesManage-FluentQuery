@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="EfDbContext.cs" />
     <Compile Include="EfNotesQuery.cs" />
+    <Compile Include="QueryReadRepository.cs" />
     <Compile Include="EfWriteRepository.cs" />
     <Compile Include="IDbContext.cs" />
     <Compile Include="Mappings\NotesMap.cs" />

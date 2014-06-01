@@ -6,7 +6,7 @@ namespace NotesManager.Business.Interfaces
 {
     public interface INotesService
     {
-        IEnumerable<Note> GetAllNotes();
+        IEnumerable<Note> Notes();
         IEnumerable<Note> GetNotes(int numberOfNotes);
         IEnumerable<Note> GetNotesWithTitleByDate(DateTime dateCreated, string title);
         IEnumerable<Note> GetNotes(string title);

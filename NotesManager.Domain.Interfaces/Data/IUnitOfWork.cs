@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NotesManager.Domain.Interfaces
+namespace NotesManager.Domain.Interfaces.Data
 {
     public interface IUnitOfWork : IDisposable
     {

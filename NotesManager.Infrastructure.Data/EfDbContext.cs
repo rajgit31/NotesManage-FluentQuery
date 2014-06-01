@@ -9,8 +9,7 @@ namespace NotesManager.Infrastructure.Data
     {
         static EfDbContext()
         {
-            //TODO:
-            //Database.SetInitializer<EfDbContext>(new MigrateDatabaseToLatestVersion<EfDbContext, ..>(..));
+            Database.SetInitializer<EfDbContext>(new DropCreateDatabaseIfModelChanges<EfDbContext>());
         }
 
         public EfDbContext(string connectionStringName)
@@ -24,7 +23,7 @@ namespace NotesManager.Infrastructure.Data
         /// <value>
         /// The addresses.
         /// </value>
-        public IDbSet<Note> Addresses { get; set; }
+        public IDbSet<Note> Notes { get; set; }
 
         /// <summary>
         /// Called when [model creating].

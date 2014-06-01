@@ -2,11 +2,15 @@
 
 namespace NotesManager.Domain.Interfaces
 {
-    public interface IQuery<T> : IEnumerable<T>
+    /// <summary>
+    /// Base interface for all queries
+    /// </summary>
+    /// <typeparam name="TEntity"></typeparam>
+    public interface IQuery<TEntity> : IEnumerable<TEntity>
     {
-        T Single();
-        T SingleOrDefualt();
-        T First();
-        T FirstOrDefault();
+        TEntity Single();
+        TEntity SingleOrDefualt();
+        TEntity First();
+        TEntity FirstOrDefault();
     }
 }
