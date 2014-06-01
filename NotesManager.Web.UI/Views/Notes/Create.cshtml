@@ -1,0 +1,23 @@
+﻿@model NotesManager.Web.UI.ViewModels.NoteViewModel
+
+@using (Html.BeginForm("Create", "Notes")) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Set Password Form</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.Title)
+                @Html.TextBoxFor(m => m.Title)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Description)
+                @Html.TextBoxFor(m => m.Description)
+            </li>
+        </ol>
+        <input type="submit" value="Create" />
+    </fieldset>
+}
+
+<p>@Html.ActionLink("Back to list", "Index", "Notes")</p>
