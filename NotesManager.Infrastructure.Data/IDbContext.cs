@@ -2,7 +2,7 @@
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 
-namespace NotesManager.Web.UI.DataRepos
+namespace NotesManager.Infrastructure.Data
 {
     public interface IDbContext : IDisposable
     {

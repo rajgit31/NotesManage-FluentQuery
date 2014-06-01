@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NotesManager.Web.UI.DomainModels
+namespace NotesManager.Domain.Entities
 {
     public class Note
     {

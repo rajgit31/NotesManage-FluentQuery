@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using NotesManager.Web.UI.DomainModels;
+using NotesManager.Business.Interfaces;
+using NotesManager.Domain.Entities;
+using NotesManager.Domain.Interfaces;
 
-namespace NotesManager.Web.UI.BusinessServices
+namespace NotesManager.Business.Services
 {
     public class NotesService : INotesService
     {

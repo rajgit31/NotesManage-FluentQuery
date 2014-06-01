@@ -1,6 +1,7 @@
 ﻿using System;
+using NotesManager.Domain.Entities;
 
-namespace NotesManager.Web.UI.DomainModels
+namespace NotesManager.Domain.Interfaces
 {
     public interface INotesQuery : IQuery<Note>
     {

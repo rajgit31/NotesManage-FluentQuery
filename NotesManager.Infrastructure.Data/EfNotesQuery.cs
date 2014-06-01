@@ -2,9 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using NotesManager.Web.UI.DomainModels;
+using NotesManager.Domain.Entities;
+using NotesManager.Domain.Interfaces;
 
-namespace NotesManager.Web.UI.DataRepos
+namespace NotesManager.Infrastructure.Data
 {
     public class EfNotesQuery : INotesQuery
     {

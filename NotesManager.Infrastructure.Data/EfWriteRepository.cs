@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
-using NotesManager.Web.UI.DomainModels;
+using NotesManager.Domain.Interfaces;
 
-namespace NotesManager.Web.UI.DataRepos
+namespace NotesManager.Infrastructure.Data
 {
     public class EfWriteRepository<TEntity> : IWriteRepository<TEntity> where TEntity : class
     {

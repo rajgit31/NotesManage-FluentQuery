@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FD96CB1C-7F6B-418E-A643-78897E86FF5B}</ProjectGuid>
+    <ProjectGuid>{75D69FF8-48A8-4534-8D05-A62C804D7980}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NotesManager.Business.Services</RootNamespace>
-    <AssemblyName>NotesManager.Business.Services</AssemblyName>
+    <RootNamespace>NotesManager.Business.Interfaces</RootNamespace>
+    <AssemblyName>NotesManager.Business.Interfaces</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,21 +39,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NotesService.cs" />
+    <Compile Include="INotesService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NotesManager.Business.Interfaces\NotesManager.Business.Interfaces.csproj">
-      <Project>{75D69FF8-48A8-4534-8D05-A62C804D7980}</Project>
-      <Name>NotesManager.Business.Interfaces</Name>
-    </ProjectReference>
     <ProjectReference Include="..\NotesManager.Domain.Entities\NotesManager.Domain.Entities.csproj">
       <Project>{BB9D8013-CDE0-48E2-A3F8-AD3A611B5675}</Project>
       <Name>NotesManager.Domain.Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\NotesManager.Domain.Interfaces\NotesManager.Domain.Interfaces.csproj">
-      <Project>{9CC257C4-1362-4156-9DD8-2A0A66A597F7}</Project>
-      <Name>NotesManager.Domain.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

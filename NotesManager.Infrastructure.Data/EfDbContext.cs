@@ -1,8 +1,9 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
-using NotesManager.Web.UI.DomainModels;
+using NotesManager.Domain.Entities;
+using NotesManager.Infrastructure.Data.Mappings;
 
-namespace NotesManager.Web.UI.DataRepos
+namespace NotesManager.Infrastructure.Data
 {
     public class EfDbContext : DbContext, IDbContext
     {

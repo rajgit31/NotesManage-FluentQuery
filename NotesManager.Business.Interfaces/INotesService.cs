@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using NotesManager.Web.UI.DomainModels;
+using NotesManager.Domain.Entities;
 
-namespace NotesManager.Web.UI.BusinessServices
+namespace NotesManager.Business.Interfaces
 {
     public interface INotesService
     {

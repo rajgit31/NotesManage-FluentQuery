@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using NotesManager.Web.UI.DomainModels;
+using NotesManager.Domain.Entities;
 using NotesManager.Web.UI.ViewModels;
 
 namespace NotesManager.Web.UI.Controllers.Helpers

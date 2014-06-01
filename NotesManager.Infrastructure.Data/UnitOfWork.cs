@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Data.Entity;
-using NotesManager.Web.UI.DomainModels;
+using NotesManager.Domain.Interfaces;
 
-namespace NotesManager.Web.UI.DataRepos
+namespace NotesManager.Infrastructure.Data
 {
     public class UnitOfWork : IUnitOfWork
     {

@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Web;
 using System.Web.Mvc;
-using NotesManager.Web.UI.BusinessServices;
+using NotesManager.Business.Interfaces;
 using NotesManager.Web.UI.Controllers.Helpers;
 using NotesManager.Web.UI.ViewModels;
 

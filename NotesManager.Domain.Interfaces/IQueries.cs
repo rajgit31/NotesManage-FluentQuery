@@ -1,4 +1,4 @@
-﻿namespace NotesManager.Web.UI.DomainModels
+﻿namespace NotesManager.Domain.Interfaces
 {
     public interface IQueries
     {

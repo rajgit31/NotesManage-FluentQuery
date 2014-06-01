@@ -196,26 +196,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Bootstrapper.cs" />
-    <Compile Include="BusinessServices\INotesService.cs" />
-    <Compile Include="BusinessServices\NotesService.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\NotesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Helpers\NotesControllerHelper.cs" />
-    <Compile Include="DataRepos\EfDbContext.cs" />
-    <Compile Include="DataRepos\EfNotesQuery.cs" />
-    <Compile Include="DataRepos\EfWriteRepository.cs" />
-    <Compile Include="DataRepos\IDbContext.cs" />
-    <Compile Include="DataRepos\NotesMap.cs" />
-    <Compile Include="DataRepos\UnitOfWork.cs" />
-    <Compile Include="DomainModels\INotesQuery.cs" />
-    <Compile Include="DomainModels\IQueries.cs" />
-    <Compile Include="DomainModels\IQuery.cs" />
-    <Compile Include="DomainModels\IReadRepository.cs" />
-    <Compile Include="DomainModels\IUnitOfWork.cs" />
-    <Compile Include="DomainModels\IWriteRepository.cs" />
-    <Compile Include="DomainModels\Note.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -296,7 +280,6 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Unity.Mvc4.README.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -345,6 +328,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NotesManager.Business.Interfaces\NotesManager.Business.Interfaces.csproj">
+      <Project>{75D69FF8-48A8-4534-8D05-A62C804D7980}</Project>
+      <Name>NotesManager.Business.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NotesManager.Domain.Entities\NotesManager.Domain.Entities.csproj">
+      <Project>{BB9D8013-CDE0-48E2-A3F8-AD3A611B5675}</Project>
+      <Name>NotesManager.Domain.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NotesManager.Infrastructure.DependencyInjection\NotesManager.Infrastructure.DependencyInjection.csproj">
+      <Project>{BD5DAE70-A30C-479D-ACB5-602CCE97D626}</Project>
+      <Name>NotesManager.Infrastructure.DependencyInjection</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

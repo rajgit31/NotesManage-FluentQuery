@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity.ModelConfiguration;
-using NotesManager.Web.UI.DomainModels;
+using NotesManager.Domain.Entities;
 
-namespace NotesManager.Web.UI.DataRepos
+namespace NotesManager.Infrastructure.Data.Mappings
 {
     public class NotesMap : EntityTypeConfiguration<Note>
     {
